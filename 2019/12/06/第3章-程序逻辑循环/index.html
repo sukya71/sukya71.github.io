@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title># 第3章 程序逻辑循环 | 「 镜 」</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="第3章 程序逻辑循环3.1 分支与循环 分支与循环是程序逻辑的基本控制单元，存在三种程序逻辑：顺序结构、分支结构、循环结构。 顺序结构：对于之前所编写的代码都是顺序结构，即所有程序代码的顺序依次按顺序自上至下执行。 分支结构（if 结构）：if 分支结构主要是针对关系表达式进行判断处理的分支操作。对于分支语句有三种组成形式：if 判断：if(…){}、if else判断：if(…){} else">
+<meta property="og:type" content="article">
+<meta property="og:title" content="# 第3章 程序逻辑循环">
+<meta property="og:url" content="http://sukya71.github.io/2019/12/06/%E7%AC%AC3%E7%AB%A0-%E7%A8%8B%E5%BA%8F%E9%80%BB%E8%BE%91%E5%BE%AA%E7%8E%AF/index.html">
+<meta property="og:site_name" content="「 镜 」">
+<meta property="og:description" content="第3章 程序逻辑循环3.1 分支与循环 分支与循环是程序逻辑的基本控制单元，存在三种程序逻辑：顺序结构、分支结构、循环结构。 顺序结构：对于之前所编写的代码都是顺序结构，即所有程序代码的顺序依次按顺序自上至下执行。 分支结构（if 结构）：if 分支结构主要是针对关系表达式进行判断处理的分支操作。对于分支语句有三种组成形式：if 判断：if(…){}、if else判断：if(…){} else">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2019-12-06T01:18:54.000Z">
+<meta property="article:modified_time" content="2019-12-06T02:23:17.473Z">
+<meta property="article:author" content="sukya71">
+<meta property="article:tag" content="Java">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="「 镜 」" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">「 镜 」</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="搜索"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://sukya71.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-第3章-程序逻辑循环" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/12/06/%E7%AC%AC3%E7%AB%A0-%E7%A8%8B%E5%BA%8F%E9%80%BB%E8%BE%91%E5%BE%AA%E7%8E%AF/" class="article-date">
+  <time datetime="2019-12-06T01:18:54.000Z" itemprop="datePublished">2019-12-06</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      # 第3章 程序逻辑循环
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="第3章-程序逻辑循环"><a href="#第3章-程序逻辑循环" class="headerlink" title="第3章 程序逻辑循环"></a>第3章 程序逻辑循环</h1><h2 id="3-1-分支与循环"><a href="#3-1-分支与循环" class="headerlink" title="3.1 分支与循环"></a>3.1 分支与循环</h2><p> 分支与循环是程序逻辑的基本控制单元，存在三种程序逻辑：顺序结构、分支结构、循环结构。</p>
+<p>顺序结构：对于之前所编写的代码都是顺序结构，即所有程序代码的顺序依次按顺序自上至下执行。</p>
+<p>分支结构（if 结构）：if 分支结构主要是针对关系表达式进行判断处理的分支操作。对于分支语句有三种组成形式：if 判断：if(…){}、if else判断：if(…){} else {}、多条件判断：if(…){} else if(…){} [else{}] 。<span id="more"></span></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span>(布尔表达式)&#123;</span><br><span class="line">    满足条件执行 ;</span><br><span class="line">&#125;[<span class="keyword">else</span> <span class="keyword">if</span> (布尔表达式)&#123; <span class="comment">//可以加任意个 else if 判断。</span></span><br><span class="line">    满足条件执行 ;</span><br><span class="line">&#125;][<span class="keyword">else</span>&#123; <span class="comment">//else 可加可不加，但是建议加，避免bug。</span></span><br><span class="line">    不满足时执行 ;</span><br><span class="line">&#125;]</span><br></pre></td></tr></table></figure>
+
+<p>在使用 if 的时候最主要的特点是它可以进行若干条件的判断，在 Java 中只有 if else 语句可以实现多条件判断。在进行多条件判断时，可以不写else语句，但好的习惯是一定要写上else语句。</p>
+<h2 id="3-2-switch-开关语句"><a href="#3-2-switch-开关语句" class="headerlink" title="3.2 switch 开关语句"></a>3.2 switch 开关语句</h2><p>switch 是一种开关语句，它主要进行内容判断，需要注意的是，switch 语句只能判断数据（<strong>int</strong>、<strong>char</strong>、<strong>枚举</strong>（JDK 1.5)、<strong>String</strong>（JKD 1.7））类型变量，而不能使用布尔表达式进行判断，它的语法如下：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">switch</span>(数据)&#123;</span><br><span class="line">    <span class="keyword">case</span> 数值 :</span><br><span class="line">        数值满足时执行 ;</span><br><span class="line">    	[<span class="keyword">break</span> ;]</span><br><span class="line">    [<span class="keyword">default</span>:</span><br><span class="line">    	所有判断数值不满足时的执行 ;</span><br><span class="line">    	[<span class="keyword">break</span> ;]    </span><br><span class="line">     ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>实例：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> ch = <span class="number">2</span> ;</span><br><span class="line"><span class="keyword">switch</span>(ch)&#123;</span><br><span class="line">    <span class="keyword">case</span> <span class="number">2</span> :</span><br><span class="line">        System.out.println(<span class="string">&quot;设置的内容为 2。&quot;</span>);</span><br><span class="line">    <span class="keyword">case</span> <span class="number">1</span> :</span><br><span class="line">        System.out.println(<span class="string">&quot;设置的内容为 1。&quot;</span>);</span><br><span class="line">    <span class="keyword">default</span>:</span><br><span class="line">    	System.out.println(<span class="string">&quot;没有内容满足。&quot;</span>) ;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+<p>执行结果：</p>
+<blockquote>
+<p>设置的内容为 2 。<br>设置的内容为 1 。<br>没有内容满足。</p>
+</blockquote>
+<p>switch 中有个重要的语句：break;<br>在使用switch语句时，如果你在每一个case后面没有追加break语句，那么会在第一个匹配的case之后继续执行其他语句，直到遇到 break; ，或全部 switch 代码执行完毕。</p>
+<p>在 JDK 1.7 版本，Oracle 公司对 Java 添加了 switch 对字符串 String 类型数据的判断。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">String str = <span class="string">&quot;hello&quot;</span> ;</span><br><span class="line"><span class="keyword">switch</span>(str) &#123;</span><br><span class="line">    <span class="keyword">case</span> <span class="string">&quot;Hello&quot;</span> :&#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;Hello&quot;</span>);</span><br><span class="line">        <span class="keyword">break</span> ;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">case</span> <span class="string">&quot;hello&quot;</span> :&#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;hello&quot;</span>);</span><br><span class="line">        <span class="keyword">break</span> ;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">default</span> :&#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;NoMatch&quot;</span>);</span><br><span class="line">        <span class="keyword">break</span> ;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;<span class="comment">// 输出： hello </span></span><br></pre></td></tr></table></figure>
+
+<p>switch 语句是一个编程语言发展中的一种重要技术，但进入桌面开发时代后 switch 语句出现频率变得很低。</p>
+<h2 id="3-3-while-循环结构"><a href="#3-3-while-循环结构" class="headerlink" title="3.3 while 循环结构"></a>3.3 while 循环结构</h2><p>所谓循环结构是指一段代码被反复执行的处理操作。在程序之中提供有 while 语句来实现循环的定义，有两种while结构：while 循环，do…while 循环。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">while</span>(布尔表达式)&#123;</span><br><span class="line">    条件满足时执行 ;</span><br><span class="line">    修改循环条件 ;</span><br><span class="line">&#125; <span class="comment">// while 循环</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">do</span>&#123;</span><br><span class="line">    条件满足时执行 ;</span><br><span class="line">    修改循环条件 ;</span><br><span class="line">  &#125; <span class="keyword">while</span>(布尔表达式) ; <span class="comment">// do...while 循环</span></span><br></pre></td></tr></table></figure>
+
+<p>while 循环实例：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> sum = <span class="number">0</span> ; <span class="comment">// 保存计算结果</span></span><br><span class="line"><span class="keyword">int</span> num = <span class="number">1</span> ; <span class="comment">// 循环控制变量</span></span><br><span class="line"><span class="keyword">while</span> (num &lt;= <span class="number">100</span>)&#123; <span class="comment">// 循环执行的条件</span></span><br><span class="line">    sum += sum ; <span class="comment">// 累加</span></span><br><span class="line">    num ++ ; <span class="comment">// 修改循环控制变量</span></span><br><span class="line">&#125;</span><br><span class="line">System.out.println(sum);</span><br></pre></td></tr></table></figure>
+
+<p>除了使用 while 循环之外，还可以使用 do…while 来进行处理：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> sum = <span class="number">0</span> ; </span><br><span class="line"><span class="keyword">int</span> num = <span class="number">1</span> ; </span><br><span class="line"><span class="keyword">do</span>&#123; </span><br><span class="line">    sum += sum ; </span><br><span class="line">    num ++ ; </span><br><span class="line">&#125;<span class="keyword">while</span> (num &lt;= <span class="number">100</span>) ; <span class="comment">// 仅将 while 循环中判断语句后置即可</span></span><br><span class="line">System.out.println(sum);</span><br></pre></td></tr></table></figure>
+
+<p>while 循环与 do…while 循环最大区别在于，while 先判断再循环，do…while 先循环再判断。在开发中见到 do…while 的几率几乎为1%。一般情况下首选的肯定是 while 循环。</p>
+<h2 id="3-4-for-循环结构"><a href="#3-4-for-循环结构" class="headerlink" title="3.4 for 循环结构"></a>3.4 for 循环结构</h2><p>在明确知道了循环次数的情况下，可以利用for循环结构来实现循环控制，for语法如下：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span>(循环初始条件 ; 循环判断 ; 循环条件变更)&#123;</span><br><span class="line">    循环执行语句 ;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>for 循环实例 使用for循环实现1-100累加：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> sum = <span class="number">0</span> ;</span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span> ; i&lt;=<span class="number">100</span> ; i++)&#123;</span><br><span class="line">    sum += i ;</span><br><span class="line">&#125;</span><br><span class="line">System.out.println(sum) ;</span><br></pre></td></tr></table></figure>
+
+<p>如果现在想更清楚观察三个操作的定义，可以拆开处理，但使用中最好不要这样写：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> sum = <span class="number">0</span> ;</span><br><span class="line"><span class="keyword">int</span> i = <span class="number">1</span> ;  </span><br><span class="line"><span class="keyword">for</span>( ; i&lt;=<span class="number">100</span> ; )&#123;</span><br><span class="line">    sum += i ;</span><br><span class="line">    i++ ;</span><br><span class="line">&#125;</span><br><span class="line">System.out.println(sum) ;</span><br></pre></td></tr></table></figure>
+
+<p>对于 while 循环和 for 循环的选择，只有一个参考标准：</p>
+<ul>
+<li>在明确循环次数的情况下优先选择 for 循环 ;</li>
+<li>在不知道循环次数但知道循环结束条件时使用 while 循环 ;</li>
+</ul>
+<h2 id="3-5-循环控制语句"><a href="#3-5-循环控制语句" class="headerlink" title="3.5 循环控制语句"></a>3.5 循环控制语句</h2><p>在循环语句定义的时候还有两个循环控制语句：break（退出整个循环） 和 continue（退出本次循环）。</p>
+<p>使用实例：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span>(<span class="keyword">int</span> x = <span class="number">0</span> ; x &lt; <span class="number">10</span> ; x++)&#123;</span><br><span class="line">    <span class="keyword">if</span>(x == <span class="number">3</span>)&#123;</span><br><span class="line">        <span class="keyword">continue</span> ;</span><br><span class="line">    &#125;</span><br><span class="line">    System.out.println(x + <span class="string">&quot;、&quot;</span>) ; <span class="comment">// 0、1、2、4、5、6、7、8、9、</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span>(<span class="keyword">int</span> x = <span class="number">0</span> ; x &lt; <span class="number">10</span> ; x++)&#123;</span><br><span class="line">    <span class="keyword">if</span>(x == <span class="number">3</span>)&#123;</span><br><span class="line">        <span class="keyword">break</span> ;</span><br><span class="line">    &#125;</span><br><span class="line">    System.out.println(x + <span class="string">&quot;、&quot;</span>) ; <span class="comment">// 0、1、2、</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>continue 只是结束当前一次循环的调用，执行到 continue 的时候就表示在当前语句中后续代码不再执行，而直接进行后续的判断循环处理。break 直接结束循环。</p>
+<p>在C语言中有一种 goto 指令，会直接导致代码的混乱，所以在开发中一般对其深恶痛绝，但是在Java中可以利用 continue 实现 goto语句的部分功能：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">point: <span class="keyword">for</span>(<span class="keyword">int</span> x = <span class="number">0</span> ; x &lt; <span class="number">7</span> ; x++)&#123;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> y = <span class="number">0</span> ; y &lt; <span class="number">3</span> ; y ++ )&#123;</span><br><span class="line">        <span class="keyword">if</span>( x == y )&#123;</span><br><span class="line">            <span class="keyword">continue</span>  point ;</span><br><span class="line">        &#125;</span><br><span class="line">        System.out.println(x + <span class="string">&quot;、&quot;</span>) ; </span><br><span class="line">    &#125;</span><br><span class="line">    System.out.println() ; </span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">1、2、2、3、3、3、</span></span><br><span class="line"><span class="comment">4、4、4、</span></span><br><span class="line"><span class="comment">5、5、5、</span></span><br><span class="line"><span class="comment">6、6、6、</span></span><br><span class="line"><span class="comment">*/</span></span><br></pre></td></tr></table></figure>
+
+<p>本程序在外层for循环上定义了 point 代码标记，在内层循环中利用 continue 语句跳转到外层循环指定标记处代码。对于此类代码强烈不建议在开发代码中出现，会导致程序代码逻辑混乱。</p>
+<h2 id="3-6-循环嵌套"><a href="#3-6-循环嵌套" class="headerlink" title="3.6 循环嵌套"></a>3.6 循环嵌套</h2><p>在一个循环语句中嵌套若干个子循环结构，称为循环嵌套处理，循环嵌套层次越多时间复杂度越高。以下为两个循环嵌套实例：</p>
+<p>打印乘法口诀表：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span>(<span class="keyword">int</span> x = <span class="number">1</span> ; x &lt; <span class="number">10</span> ; x++ )&#123;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> y = <span class="number">1</span> ; y &lt;= x ; y++)&#123;</span><br><span class="line">        System.out.print(y + <span class="string">&quot;*&quot;</span> + x + <span class="string">&quot;=&quot;</span> + (x*y) + <span class="string">&quot;\t&quot;</span>) ;</span><br><span class="line">    &#125;</span><br><span class="line">    System.out.println();</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">1*1=1	</span></span><br><span class="line"><span class="comment">1*2=2	2*2=4	</span></span><br><span class="line"><span class="comment">1*3=3	2*3=6	3*3=9	</span></span><br><span class="line"><span class="comment">1*4=4	2*4=8	3*4=12	4*4=16	</span></span><br><span class="line"><span class="comment">1*5=5	2*5=10	3*5=15	4*5=20	5*5=25	</span></span><br><span class="line"><span class="comment">1*6=6	2*6=12	3*6=18	4*6=24	5*6=30	6*6=36	</span></span><br><span class="line"><span class="comment">1*7=7	2*7=14	3*7=21	4*7=28	5*7=35	6*7=42	7*7=49	</span></span><br><span class="line"><span class="comment">1*8=8	2*8=16	3*8=24	4*8=32	5*8=40	6*8=48	7*8=56	8*8=64	</span></span><br><span class="line"><span class="comment">1*9=9	2*9=18	3*9=27	4*9=36	5*9=45	6*9=54	7*9=63	8*9=72	9*9=81	</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>打印三角形：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 个人试写 1</span></span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">int</span> x = <span class="number">1</span> ; x &lt;= <span class="number">5</span> ; x++ )&#123;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> y = -<span class="number">5</span> ; y &lt;= <span class="number">5</span> ; y++)&#123;</span><br><span class="line">        <span class="keyword">if</span>(Math.abs(y) &lt; x)&#123;</span><br><span class="line">            System.out.print(<span class="string">&quot;* &quot;</span> ) ;</span><br><span class="line">        &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">             System.out.print(<span class="string">&quot; &quot;</span> ) ;</span><br><span class="line">        &#125;       </span><br><span class="line">    &#125;</span><br><span class="line">    System.out.println();</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">     *      </span></span><br><span class="line"><span class="comment">    * * *     </span></span><br><span class="line"><span class="comment">   * * * * *    </span></span><br><span class="line"><span class="comment">  * * * * * * *   </span></span><br><span class="line"><span class="comment"> * * * * * * * * *  </span></span><br><span class="line"><span class="comment"> ※ 不要想着从数据处理上一次性解决问题，多利用程序用结构。</span></span><br><span class="line"><span class="comment"> */</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 个人试写 2</span></span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">int</span> x = <span class="number">1</span> ; x &lt;= <span class="number">5</span> ; x++ )&#123;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> y = <span class="number">5</span> ; (y-x) &gt; <span class="number">0</span> ; y--)&#123;</span><br><span class="line">            System.out.print(<span class="string">&quot; &quot;</span>) ;</span><br><span class="line">        &#125;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> y = <span class="number">1</span> ; y &lt;= x ; y++)&#123;</span><br><span class="line">        	System.out.pront(<span class="string">&quot;* &quot;</span>);</span><br><span class="line">    	&#125;</span><br><span class="line">    System.out.println();</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">    * </span></span><br><span class="line"><span class="comment">   * * </span></span><br><span class="line"><span class="comment">  * * * </span></span><br><span class="line"><span class="comment"> * * * * </span></span><br><span class="line"><span class="comment">* * * * * </span></span><br><span class="line"><span class="comment">※ 可将 5 前置定义变量，方便修改数值。</span></span><br><span class="line"><span class="comment">*/</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 原始范例 0</span></span><br><span class="line"><span class="keyword">int</span> line = <span class="number">5</span> ;</span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">int</span> x = <span class="number">0</span> ; x &lt; line ; x++)&#123;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> y = <span class="number">0</span> ; y &lt; line  - x ; y++)&#123;</span><br><span class="line">        System.out.print(<span class="string">&quot; &quot;</span>) ;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> y = <span class="number">0</span>; y &lt;= x ; y++)&#123;</span><br><span class="line">        System.out.print(<span class="string">&quot;* &quot;</span>) ;</span><br><span class="line">    &#125;</span><br><span class="line"> 	System.out.println() ;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://sukya71.github.io/2019/12/06/%E7%AC%AC3%E7%AB%A0-%E7%A8%8B%E5%BA%8F%E9%80%BB%E8%BE%91%E5%BE%AA%E7%8E%AF/" data-id="ckqhrm1vm000fcgwd3j1b8he1" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Java/" rel="tag">Java</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2019/12/09/39-%E6%97%A5%E5%B8%B8%E6%97%B6%E5%B7%AE/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          #39 日常时差
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2019/11/30/%E7%AC%AC2%E7%AB%A0-%E7%A8%8B%E5%BA%8F%E5%9F%BA%E7%A1%80%E6%A6%82%E5%BF%B5/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title"># 第2章 程序概念基础</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Java/" rel="tag">Java</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%A4%8D%E7%9B%98/" rel="tag">复盘</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%B4%BB%E7%9D%80/" rel="tag">活着</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签云</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/Java/" style="font-size: 20px;">Java</a> <a href="/tags/%E5%A4%8D%E7%9B%98/" style="font-size: 10px;">复盘</a> <a href="/tags/%E6%B4%BB%E7%9D%80/" style="font-size: 15px;">活着</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/06/">六月 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/06/">六月 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/12/">十二月 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/11/">十一月 2019</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2021/06/28/hello-world/">Hello World</a>
+          </li>
+        
+          <li>
+            <a href="/2020/06/22/new-blog/">new_blog</a>
+          </li>
+        
+          <li>
+            <a href="/2019/12/16/%E5%85%B3%E4%BA%8E%E7%90%86%E8%A7%A3%E8%83%BD%E5%8A%9B%E4%B8%8E%E5%A4%8D%E7%9B%98/">关于理解能力与复盘</a>
+          </li>
+        
+          <li>
+            <a href="/2019/12/10/%E7%AC%AC4%E7%AB%A0-%E6%96%B9%E6%B3%95/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2019/12/09/39-%E6%97%A5%E5%B8%B8%E6%97%B6%E5%B7%AE/">#39 日常时差</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2021 sukya71<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+  </div>
+</body>
+</html>
